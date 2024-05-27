@@ -1,18 +1,49 @@
-<h2>Reservation List</h2>
-<button [routerLink]="['/new']">Go to addReservation</button>
+<div class="container">
+  <div class="d-flex">
+    <h2 class="mx-3">Reservation List</h2>
+    <button [routerLink]="['/new']" class="btn btn-primary">
+      Go to addReservation
+    </button>
+  </div>
 
-<ul *ngIf="reservations.length; else noReservation">
-  <li *ngFor="let reservation of reservations">
-    Guest: {{ reservation.guestName }} <br />
-    Email: {{ reservation.guestName }}<br />
-    Room No:{{ reservation.roomNumber }}<br />
-    Check-In:{{ reservation.checkInDate }}<br />
-    Check-Out:{{ reservation.checkOutDate }}<br />
-    <button (click)="deleteReservation(reservation.id)">Delete</button>
-    <button [routerLink]="['/edit', reservation.id]">Edit</button>
-  </li>
-</ul>
+  <table class="table" *ngIf="reservations.length; else noReservation">
+    <thead class="thead-dark">
+      <tr>
+        <th>Guest</th>
+        <th>Email</th>
+        <th>Room No.</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reservation of reservations">
+        <th>{{ reservation.guestName }}</th>
+        <td>{{ reservation.guestName }}</td>
+        <td>{{ reservation.roomNumber }}</td>
+        <td>{{ reservation.checkInDate }}</td>
+        <td>{{ reservation.checkOutDate }}</td>
+        <td>
+          <button
+            (click)="deleteReservation(reservation.id)"
+            class="btn btn-danger"
+            style="margin-right: 10px"
+          >
+            Delete
+          </button>
+          <button
+            [routerLink]="['/edit', reservation.id]"
+            class="btn btn-warning"
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<ng-template #noReservation>
-  <p>No reservation available</p>
-</ng-template>
+  <ng-template #noReservation>
+    <p>No reservation available</p>
+  </ng-template>
+</div>
