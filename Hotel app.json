@@ -36,12 +36,144 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "88b101c1-3b41-49f6-9710-daf3b7d763d9",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "04bece74-19ea-4818-b7d3-c414de303afa",
+          "body": "{\n  \"id\":\"1\",\n  \"guestName\":\"Hai Long\",\n  \"guestEmail\":\"asdf@gmail.com\",\n  \"roomNumber\":100,\n  \"checkInDate\":\"2023-05-28\",\n  \"checkOutDate\":\"2023-05-28\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "de3e065d-f71e-4baa-a95d-6c56ce207d00",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "33170bef-e12f-46cf-8eaa-4af4d0c70090",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "8cf0cd51-6057-4b90-9d46-f1891bad1f97",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "reservation/:id",
+      "responses": [
+        {
+          "uuid": "0800323a-cda3-4e2c-b7b1-0443a94f6d39",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3ba96a97-7778-446c-b71c-ccdd1ec632df",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservation",
+      "responses": [
+        {
+          "uuid": "8569000e-233e-475c-842a-00f9c721b1a1",
+          "body": "{\n  \"id\":\"1\",\n  \"guestName\":\"Hai Long\",\n  \"guestEmail\":\"asdf@gmail.com\",\n  \"roomNumber\":100,\n  \"checkInDate\":\"2023-05-28\",\n  \"checkOutDate\":\"2023-05-28\"\n}\n",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "d7c312c9-f864-4502-862a-8ccce7e8a135"
+    },
+    {
+      "type": "route",
+      "uuid": "88b101c1-3b41-49f6-9710-daf3b7d763d9"
+    },
+    {
+      "type": "route",
+      "uuid": "de3e065d-f71e-4baa-a95d-6c56ce207d00"
+    },
+    {
+      "type": "route",
+      "uuid": "8cf0cd51-6057-4b90-9d46-f1891bad1f97"
+    },
+    {
+      "type": "route",
+      "uuid": "3ba96a97-7778-446c-b71c-ccdd1ec632df"
     }
   ],
   "proxyMode": false,
