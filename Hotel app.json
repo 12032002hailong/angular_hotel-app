@@ -1,0 +1,92 @@
+{
+  "uuid": "8707b858-f34c-4d87-87fc-e0f37ec90afc",
+  "lastMigration": 32,
+  "name": "Hotel app",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "d7c312c9-f864-4502-862a-8ccce7e8a135",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "c64c81f8-c144-403d-b465-53db72c208b1",
+          "body": "[\n  {\n  \"id\":\"1\",\n  \"guestName\":\"Hai Long\",\n  \"guestEmail\":\"asdf@gmail.com\",\n  \"roomNumber\":100,\n  \"checkInDate\":\"2023-05-28\",\n  \"checkOutDate\":\"2023-05-28\"\n},\n  {\n  \"id\":\"2\",\n  \"guestName\":\"Wang Ju\",\n  \"guestEmail\":\"ouv@gmail.com\",\n  \"roomNumber\":102,\n  \"checkInDate\":\"2023-06-28\",\n  \"checkOutDate\":\"2023-06-28\"\n}\n\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "d7c312c9-f864-4502-862a-8ccce7e8a135"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
